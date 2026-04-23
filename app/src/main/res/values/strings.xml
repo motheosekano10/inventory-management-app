@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Inventory Manager</string>
     <string-array name="categories">
         <item>Electronics</item>
         <item>Clothing</item>
