@@ -14,7 +14,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
     @Override public VH onCreateViewHolder(ViewGroup p, int v) { return new VH(LayoutInflater.from(p.getContext()).inflate(R.layout.item_product, p, false)); }
     @Override public void onBindViewHolder(VH h, int pos) {
         Product p = list.get(pos);
-        h.name.setText(p.name); h.price.setText("$" + p.price); h.stock.setText("Stock: " + p.stock); h.cat.setText(p.category);
+        h.name.setText(p.name); h.price.setText("R" + p.price); h.stock.setText("Stock: " + p.stock); h.cat.setText(p.category);
         h.edit.setOnClickListener(v -> listener.onEdit(p));
         h.delete.setOnClickListener(v -> listener.onDelete(p.id));
     }
