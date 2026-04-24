@@ -23,9 +23,9 @@ public class ReportsFragment extends Fragment {
         ArrayList<Sale> sales = db.getSales();
         rv.setLayoutManager(new LinearLayoutManager(getContext())); rv.setAdapter(new SaleAdapter(sales));
         double total = db.getTotalSales();
-        ((TextView)v.findViewById(R.id.tvTotal)).setText("Total Sales: $" + String.format("%.2f", total));
+        ((TextView)v.findViewById(R.id.tvTotal)).setText("Total Sales: R" + String.format("%.2f", total));
         double profit = total * 0.3; // Simulated 30% margin
-        ((TextView)v.findViewById(R.id.tvProfit)).setText("Est. Profit: $" + String.format("%.2f", profit));
+        ((TextView)v.findViewById(R.id.tvProfit)).setText("Est. Profit: R" + String.format("%.2f", profit));
         ProgressBar bar = v.findViewById(R.id.progressBar); bar.setProgress((int)(Math.min(total/10, 100)));
         Button export = v.findViewById(R.id.btnExport);
         export.setOnClickListener(c -> {
