@@ -12,7 +12,7 @@ public class DashboardFragment extends Fragment {
         ((TextView)v.findViewById(R.id.tvInvVal)).setText("R" + String.format("%.2f", db.getInventoryValue()));
         ((TextView)v.findViewById(R.id.tvSalesTot)).setText("R" + String.format("%.2f", db.getTotalSales()));
         int low = db.getLowStock().size();
-        ((TextView)v.findViewById(R.id.tvLowStock)).setText(low > 0 ? "⚠️ " + low + " items low" : "✅ Stock healthy");
+        ((TextView)v.findViewById(R.id.tvLowStock)).setText(low > 0 ? "WARNING: " + low + " items low stock" : "Stock status: OK");
         return v;
     }
 }
