@@ -18,7 +18,7 @@ public class SalesFragment extends Fragment {
         DatabaseHelper db = new DatabaseHelper(getContext());
         Spinner sp = v.findViewById(R.id.spProd); EditText qty = v.findViewById(R.id.etQty); Button btn = v.findViewById(R.id.btnSave);
         ArrayList<Product> prods = db.getProducts();
-        ArrayList<String> names = new ArrayList<>(); for(Product p : prods) names.add(p.name + " ($" + p.price + ")");
+        ArrayList<String> names = new ArrayList<>(); for(Product p : prods) names.add(p.name + " (R" + p.price + ")");
         sp.setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, names));
         v.findViewById(R.id.etDate).setOnClickListener(c -> {
             Calendar cal = Calendar.getInstance();
